@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_coolnjoy"
+            android:icon="@drawable/ic_computer_black_24dp"
+            android:title="쿨엔조이 특가 게시판" />
+        <item
+            android:id="@+id/nav_ruli"
+            android:icon="@drawable/ic_videogame_asset_black_24dp"
+            android:title="루리웹 특가 게시판" />
+        <item
+            android:id="@+id/nav_ppom1"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="뽐뿌 특가 게시판" />
+        <item
+            android:id="@+id/nav_ppom2"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:title="뽐뿌 해외 특가 게시판" />
+    </group>
+<!--
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+-->
+    <item android:title="공지">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:title="개발자" />
+        </menu>
+    </item>
+
+</menu>
