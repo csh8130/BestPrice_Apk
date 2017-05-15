@@ -34,8 +34,12 @@
         </menu>
     </item>
 -->
-    <item android:title="공지">
+    <item android:title="기타">
         <menu>
+            <item
+                android:id="@+id/nav_kakao"
+                android:icon="@drawable/ic_message_black_24dp"
+                android:title="앱 공유하기" />
             <item
                 android:id="@+id/nav_help"
                 android:icon="@drawable/ic_help_outline_black_24dp"

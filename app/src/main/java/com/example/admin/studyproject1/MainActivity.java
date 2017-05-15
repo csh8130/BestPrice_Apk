@@ -5,6 +5,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -127,6 +128,16 @@ public class MainActivity extends AppCompatActivity
         {
             Toast.makeText(getApplicationContext(),"추후 추가예정 : 추가 게시판, 카톡 및 문자 공유" +
                     "\n추가 하고싶은 기능 : 새 게시물 알림 기능\n\n많은 후기 부탁드립니다",Toast.LENGTH_LONG).show();
+        }else if (id == R.id.nav_kakao) {
+            String subject = "특가 게시판 모음 무료 앱을 추천합니다\n";
+            String text = "https://play.google.com/store/apps/details?id=com.csh8130.admin.studyproject1";
+
+            Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+            intent.putExtra(Intent.EXTRA_TEXT, text);
+            Intent chooser = Intent.createChooser(intent, "타이틀");
+            startActivity(chooser);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
