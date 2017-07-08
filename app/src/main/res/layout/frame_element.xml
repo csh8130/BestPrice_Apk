@@ -13,7 +13,6 @@
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/textBack"
         android:textColor="@color/textGray"
         android:textSize="15sp"/>
 
@@ -22,8 +21,6 @@
         android:id="@+id/caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/textBack"
-        android:textColor="@color/textWhite"
         android:textSize="20sp" />
 
     <TextView
@@ -36,7 +33,7 @@
     <ImageView
         android:id="@+id/delimeter"
         android:layout_width="match_parent"
-        android:layout_height="1px"
+        android:layout_height="1dp"
         android:background="#505050"/>
 
 </LinearLayout>

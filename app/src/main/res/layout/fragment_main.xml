@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/textBack">
+    android:background="#000000">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,7 +17,22 @@
                 android:text="사용법 : 왼쪽 상단의 메뉴 버튼을 클릭하여 게시판을 선택\n\n또는 왼쪽끝에서 오른쪽으로 드래그하면 메뉴가 나타납니다\n\n메뉴에서 항목을 누를때마다 게시판이 새로고침 됩니다\n\n기능 추가/업데이트 예정입니다"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:textColor="@color/textWhite"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:paddingTop="50dp"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                app:srcCompat="@drawable/main_lime"
+                android:padding="10dp"/>
+
+            <TextView
+                android:text="2017-05-09 v1.0 : 최초 버전 출시\n\n2017-05-16 v1.1 : 앱 공유하기 기능 추가\n\n2017-07-08 v1.2 : 테마 기능 추가"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textColor="#ffffff"
                 android:gravity="center"
                 android:paddingTop="50dp"/>
 

@@ -2,9 +2,27 @@
 <resources>
     <color name="colorPrimary">#3d3d3d</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccent">#000000</color>
+
 
     <color name="textBack">#000000</color>
-    <color name="textWhite">#ffffff</color>
+    <color name="textCaption">#ffffff</color>
     <color name="textGray">#868686</color>
+    <color name="deli_color">#868686</color>
+
+    <color name="textBack2">#eeeeee</color>
+    <color name="textCaption2">#000000</color>
+    <color name="textGray2">#868686</color>
+    <color name="deli_color2">#000000</color>
+
+    <color name="textBack3">#000000</color>
+    <color name="textCaption3">#3aff33</color>
+    <color name="textGray3">#81ff7f</color>
+    <color name="deli_color3">#868686</color>
+
+    <color name="textBack4">#000000</color>
+    <color name="textCaption4">#ff0000</color>
+    <color name="textGray4">#760006</color>
+    <color name="deli_color4">#868686</color>
+
 </resources>

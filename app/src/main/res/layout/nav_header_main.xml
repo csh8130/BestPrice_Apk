@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="게임 좋아하는 개발자"
+        android:text="학생 개발자"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
