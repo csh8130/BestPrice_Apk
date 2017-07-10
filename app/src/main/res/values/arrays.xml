@@ -12,5 +12,67 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+    <string-array name="coolN_entries">
+        <item>뉴스/신제품</item>
+        <item>팁/강좌</item>
+        <item>자료실</item>
+        <item>공랭쿨링</item>
+        <item>수랭쿨링</item>
+        <item>하드코어쿨링</item>
+        <item>튜닝,케이스</item>
+        <item>오버클럭</item>
+        <item>CPU,MB,RAM</item>
+        <item>그래픽카드</item>
+        <item>HDD,SSD</item>
+        <item>사운드장치</item>
+        <item>디스플레이장치</item>
+        <item>VR기기</item>
+        <item>키보드,마우스</item>
+        <item>파워서플라이[p]</item>
+        <item>조립/견적</item>
+        <item>네트워크</item>
+        <item>노트북</item>
+        <item>스마트폰,테블릿</item>
+        <item>업계 동향(AS)</item>
+        <item>기타 HW</item>
+        <item>OS 및 소프트웨어</item>
+        <item>게임</item>
+        <item>소모임</item>
+    </string-array>
+    <string-array name="coolN_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="default_array">
+        <item>0</item>
+        <item>1</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
 
 </resources>

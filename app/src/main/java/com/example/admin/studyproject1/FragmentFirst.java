@@ -15,6 +15,13 @@ import android.view.ViewGroup;
  */
 
 public class FragmentFirst extends Fragment {
+    String url = "";
+
+    public void setUrl(String url0)
+    {
+        url = url0;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,8 +47,15 @@ public class FragmentFirst extends Fragment {
             v.setBackgroundColor(getResources().getColor(R.color.textBack4));
         }
 
-
-        JsoupCoolnJoy coolnJoy = new JsoupCoolnJoy(v,getActivity());
+        JsoupCoolnJoy coolnJoy;
+        if(url =="")
+        {
+            coolnJoy = new JsoupCoolnJoy(v,getActivity());
+        }
+        else
+        {
+            coolnJoy = new JsoupCoolnJoy(v,getActivity(),url);
+        }
         coolnJoy.execute();
 
         return v;

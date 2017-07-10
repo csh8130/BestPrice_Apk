@@ -27,11 +27,19 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
     Activity mainActivity;
     public ArrayList<BoardElement> array;
     View v;
+    String url = "http://www.coolenjoy.net/bbs/board.php?bo_table=jirum"; //특가게시판
 
-    JsoupCoolnJoy(View view,Activity main)
+    public JsoupCoolnJoy(View view,Activity main)
     {
         v = view;
         mainActivity = main;
+    }
+
+    public JsoupCoolnJoy(View view,Activity main,String url0)
+    {
+        v = view;
+        mainActivity = main;
+        url = url0;
     }
 
     @Override
@@ -41,7 +49,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
         {
             array.add(new BoardElement());
         }
-        String url = "http://www.coolenjoy.net/bbs/board.php?bo_table=jirum";
 
         String selector = "td.td_subject";
 

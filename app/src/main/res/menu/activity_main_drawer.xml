@@ -2,24 +2,137 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_coolnjoy"
-            android:icon="@drawable/ic_computer_black_24dp"
-            android:title="쿨엔조이 특가 게시판" />
-        <item
-            android:id="@+id/nav_ruli"
-            android:icon="@drawable/ic_videogame_asset_black_24dp"
-            android:title="루리웹 특가 게시판" />
-        <item
-            android:id="@+id/nav_ppom1"
-            android:icon="@drawable/ic_shopping_cart_black_24dp"
-            android:title="뽐뿌 특가 게시판" />
-        <item
-            android:id="@+id/nav_ppom2"
-            android:icon="@drawable/ic_monetization_on_black_24dp"
-            android:title="뽐뿌 해외 특가 게시판" />
-    </group>
+
+    <item android:title="특가게시판">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_coolnjoy"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="쿨엔조이 특가 게시판" />
+                <item
+                    android:id="@+id/nav_ruli"
+                    android:icon="@drawable/ic_videogame_asset_black_24dp"
+                    android:title="루리웹 특가 게시판" />
+                <item
+                    android:id="@+id/nav_ppom1"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="뽐뿌 특가 게시판" />
+                <item
+                    android:id="@+id/nav_ppom2"
+                    android:icon="@drawable/ic_monetization_on_black_24dp"
+                    android:title="뽐뿌 해외 특가 게시판" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="쿨엔조이 게시판">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_coolnjoy_board_0"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="뉴스/신제품" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_1"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="팁/강좌" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_2"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="자료실" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_3"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="공랭쿨링" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_4"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="수랭쿨링" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_5"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="하드코어쿨링" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_6"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="튜닝,케이스" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_7"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="오버클럭" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_8"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="CPU,MB,RAM" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_9"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="그래픽카드" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_10"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="HDD,SSD" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_11"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="사운드장치" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_12"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="디스플레이장치" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_13"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="VR기기" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_14"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="키보드,마우스" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_15"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="파워서플라이" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_16"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="조립/견적" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_17"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="네트워크" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_18"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="노트북" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_19"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="스마트폰,테블릿" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_20"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="업계 동향(AS)" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_21"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="기타 HW" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_22"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="OS 및 소프트웨어" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_23"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="게임" />
+                <item
+                    android:id="@+id/nav_coolnjoy_board_24"
+                    android:icon="@drawable/ic_computer_black_24dp"
+                    android:title="소모임" />
+            </group>
+        </menu>
+    </item>
+
 <!--
     <item android:title="Communicate">
         <menu>

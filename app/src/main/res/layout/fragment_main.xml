@@ -14,7 +14,7 @@
             android:orientation="vertical"
             android:dividerHeight="3dp">
             <TextView
-                android:text="사용법 : 왼쪽 상단의 메뉴 버튼을 클릭하여 게시판을 선택\n\n또는 왼쪽끝에서 오른쪽으로 드래그하면 메뉴가 나타납니다\n\n메뉴에서 항목을 누를때마다 게시판이 새로고침 됩니다\n\n기능 추가/업데이트 예정입니다"
+                android:text="사용법 : 왼쪽 상단의 메뉴 버튼을 클릭하여 게시판을 선택\n\n또는 왼쪽끝에서 오른쪽으로 드래그하면 메뉴가 나타납니다\n\n메뉴에서 항목을 누를때마다 게시판이 새로고침 됩니다\n\n세팅화면에서 색상과 쿨엔조이 게시판설정을 변경할 수 있습니다"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:textColor="#ffffff"
@@ -29,7 +29,7 @@
                 android:padding="10dp"/>
 
             <TextView
-                android:text="2017-05-09 v1.0 : 최초 버전 출시\n\n2017-05-16 v1.1 : 앱 공유하기 기능 추가\n\n2017-07-08 v1.2 : 테마 기능 추가"
+                android:text="2017-05-09 v1.0 : 최초 버전 출시\n\n2017-05-16 v1.1 : 앱 공유하기 기능 추가\n\n2017-07-08 v1.2 : 테마 기능 추가\n\n2017-07-11 v1.3 : 쿨엔조이 게시판 기능 추가"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:textColor="#ffffff"
