@@ -63,7 +63,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
                 x++;
             }
 
-            selector = "td.td_subject a";
+            selector = "td.td_subject a:nth-child(1)";
 
             Elements links = doc.select(selector);
 
