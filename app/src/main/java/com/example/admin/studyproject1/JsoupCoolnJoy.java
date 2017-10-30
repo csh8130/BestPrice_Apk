@@ -45,12 +45,12 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... params) {
         array = new ArrayList<BoardElement>(25);
-        for(int i=0;i<25;i++)
+        for(int i=0;i<24;i++)
         {
             array.add(new BoardElement());
         }
 
-        String selector = "td.td_subject";
+        String selector = "tr:not(.bo_notice) td.td_subject";
 
         //출처: http://cooljy.tistory.com/349 [CoolJY 네 다락방]
         try{
@@ -63,7 +63,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
                 x++;
             }
 
-            selector = "td.td_subject a:nth-child(1)";
+            selector = "tr:not(.bo_notice) td.td_subject a";
 
             Elements links = doc.select(selector);
 
@@ -75,7 +75,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
                 x++;
             }
 
-            selector = "td.td_date";
+            selector = "tr:not(.bo_notice) td.td_date";
 
             Elements dates = doc.select(selector);
 
