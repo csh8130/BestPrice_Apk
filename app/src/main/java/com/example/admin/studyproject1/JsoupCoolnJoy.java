@@ -14,7 +14,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -44,7 +46,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        array = new ArrayList<BoardElement>(25);
+        array = new ArrayList<BoardElement>(24);
         for(int i=0;i<24;i++)
         {
             array.add(new BoardElement());
@@ -61,18 +63,24 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : titles) {
                 array.get(x).title = e.text();
                 x++;
+                if(x==24)
+                    break;
             }
 
-            selector = "tr:not(.bo_notice) td.td_subject a";
+            selector = "tr:not(.bo_notice) td.td_subject a:nth-child(1)";
 
             Elements links = doc.select(selector);
+
+            //if(links.size() ==0)
+                //Toast.makeText(mainActivity.getApplicationContext(),""+links.size(),Toast.LENGTH_LONG).show();
 
             x = 0;
 
             for (Element e : links) {
-                if (x % 2 == 0)
-                    array.get(x / 2).link = e.attributes().get("href");
+                array.get(x).link = e.attributes().get("href");
                 x++;
+                if(x==24)
+                    break;
             }
 
             selector = "tr:not(.bo_notice) td.td_date";
@@ -83,6 +91,8 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : dates) {
                 array.get(x).date = e.text();
                 x++;
+                if(x==24)
+                    break;
             }
         }
         catch ( Exception e)
