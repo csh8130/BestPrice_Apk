@@ -5,6 +5,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
+import android.app.Fragment;
 import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -171,6 +172,14 @@ public class MainActivity extends AppCompatActivity
         {
             group=0;
             index=3;
+        } else if (id == R.id.nav_slr1)
+        {
+            group=0;
+            index=4;
+        } else if (id == R.id.nav_slr2)
+        {
+            group=0;
+            index=5;
         } else if(id == R.id.nav_coolnjoy_board_0)
         {
             group=1;
@@ -382,6 +391,8 @@ public class MainActivity extends AppCompatActivity
         FragmentSecond fragmentSecond;
         FragmentThird fragmentThird;
         FragmentForth fragmentForth;
+        FragmentFifth fragmentFifth;
+        FragmentSixth fragmentSixth;
 
         if(group == 0)
         {
@@ -404,6 +415,16 @@ public class MainActivity extends AppCompatActivity
             {
                 fragmentForth = new FragmentForth();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container,fragmentForth).commit();
+            }
+            if(index == 4)
+            {
+                fragmentFifth = new FragmentFifth();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container,fragmentFifth).commit();
+            }
+            if(index == 5)
+            {
+                fragmentSixth = new FragmentSixth();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container,fragmentSixth).commit();
             }
         }
 

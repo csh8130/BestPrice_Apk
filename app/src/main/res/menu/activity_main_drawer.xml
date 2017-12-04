@@ -22,6 +22,14 @@
                     android:id="@+id/nav_ppom2"
                     android:icon="@drawable/ic_monetization_on_black_24dp"
                     android:title="뽐뿌 해외 특가 게시판" />
+                <item
+                    android:id="@+id/nav_slr1"
+                    android:icon="@drawable/ic_camera_alt_black_24dp"
+                    android:title="SLR 특가 게시판" />
+                <item
+                    android:id="@+id/nav_slr2"
+                    android:icon="@drawable/ic_monetization_on_black_24dp"
+                    android:title="SLR 해외 특가 게시판" />
             </group>
         </menu>
     </item>
