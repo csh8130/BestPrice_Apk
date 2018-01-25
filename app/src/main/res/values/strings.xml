@@ -7,5 +7,7 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="update_history_str">2017-05-09 v1.0 : 최초 버전 출시\n\n2017-05-16 v1.1 : 앱 공유하기 기능 추가\n\n2017-07-08 v1.2 : 테마 기능 추가\n\n2017-07-11 v1.3 : 쿨엔조이 게시판 기능 추가\n\n2017-10-29 v1.4 :쿨엔조이 게시판 버그 수정\n\n2017-10-30 v1.41 :쿨엔조이 게시판 버그 재 수정\n\n2017-10-30 v1.42 :쿨엔조이 게시판 버그 재재 수정\n\n2017-12-04 v1.5 :SLR 특가 게시판 추가\n\n2018-01-26 v1.51 :특가 게시판 숨기기 기능 추가</string>
+
     <string name="banner_ad_unit_id"></string>
 </resources>

@@ -89,9 +89,10 @@ public class MainActivity extends AppCompatActivity
         Set<String> defArraySet = new HashSet<String>();
         defArraySet.add("0");
         defArraySet.add("1");
-        defArraySet.add("7");
-        defArraySet.add("8");
-        defArraySet.add("9");
+        defArraySet.add("2");
+        defArraySet.add("3");
+        defArraySet.add("4");
+        defArraySet.add("5");
         Set<String> arraySet = setRefer.getStringSet("multi_select_list_preference_coolN",defArraySet);
         Object[] array = arraySet.toArray();
 
@@ -103,13 +104,28 @@ public class MainActivity extends AppCompatActivity
         int subSize = s.size();
         for(int j=0;j<subSize;j++)
         {
-            s.getItem(j).setVisible(false);
+            s.getItem(j).setVisible(false); //쿨엔조이 게시판 일단 전부 가리기
         }
         for(int j=0;j<array.length;j++)
         {
             s.getItem(Integer.parseInt((String)array[j])).setVisible(true);
         }
 
+        //메인게시판 메뉴 설정에따른 visible 조절 코드 onPostResume에도 똑같은 코드 넣어둬야 ... 실시간적용됨
+        Set<String> arraySet2 = setRefer.getStringSet("multi_select_list_preference_boards",defArraySet);
+        Object[] array2 = arraySet2.toArray();
+
+        MenuItem boardMenu = m.getItem(0);
+        SubMenu board_sub = boardMenu.getSubMenu();
+        int board_subSize = board_sub.size();
+        for(int j=0;j<board_subSize;j++)
+        {
+            board_sub.getItem(j).setVisible(false); // 메인 게시판 일단 전부 가리기
+        }
+        for(int j=0;j<array2.length;j++)
+        {
+            board_sub.getItem(Integer.parseInt((String)array2[j])).setVisible(true);
+        }
     }
 
 
@@ -361,9 +377,10 @@ public class MainActivity extends AppCompatActivity
             Set<String> defArraySet = new HashSet<String>();
             defArraySet.add("0");
             defArraySet.add("1");
-            defArraySet.add("7");
-            defArraySet.add("8");
-            defArraySet.add("9");
+            defArraySet.add("2");
+            defArraySet.add("3");
+            defArraySet.add("4");
+            defArraySet.add("5");
             Set<String> arraySet = setRefer.getStringSet("multi_select_list_preference_coolN",defArraySet);
             Object[] array = arraySet.toArray();
 
@@ -381,6 +398,22 @@ public class MainActivity extends AppCompatActivity
             for(int j=0;j<array.length;j++)
             {
                 s.getItem(Integer.parseInt((String)array[j])).setVisible(true);
+            }
+
+            //메인게시판 메뉴 설정에따른 visible 조절 코드 onCreate에도 똑같은 코드 넣어둬야 ... 앱 실행시
+            Set<String> arraySet2 = setRefer.getStringSet("multi_select_list_preference_boards",defArraySet);
+            Object[] array2 = arraySet2.toArray();
+
+            MenuItem boardMenu = m.getItem(0);
+            SubMenu board_sub = boardMenu.getSubMenu();
+            int board_subSize = board_sub.size();
+            for(int j=0;j<board_subSize;j++)
+            {
+                board_sub.getItem(j).setVisible(false); // 메인 게시판 일단 전부 가리기
+            }
+            for(int j=0;j<array2.length;j++)
+            {
+                board_sub.getItem(Integer.parseInt((String)array2[j])).setVisible(true);
             }
 
     }

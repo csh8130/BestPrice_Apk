@@ -7,8 +7,8 @@ android {
         applicationId 'com.csh8130.admin.studyproject1'
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 8
-        versionName '1.5'
+        versionCode 9
+        versionName '1.51'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

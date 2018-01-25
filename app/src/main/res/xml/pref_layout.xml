@@ -7,11 +7,17 @@
         android:key="list_preference_theme"
         android:title="색상 테마 선택" />
     <MultiSelectListPreference
+        android:defaultValue="@array/default_board_array"
+        android:entries="@array/board_entries"
+        android:entryValues="@array/board_values"
+        android:key="multi_select_list_preference_boards"
+        android:title="특가 게시판 보이기 설정" />
+    <MultiSelectListPreference
         android:defaultValue="@array/default_array"
         android:entries="@array/coolN_entries"
         android:entryValues="@array/coolN_values"
         android:key="multi_select_list_preference_coolN"
-        android:title="쿨엔조이 게시판 선택" />
+        android:title="쿨엔조이 게시판 보이기 설정" />
 
 
 </PreferenceScreen>

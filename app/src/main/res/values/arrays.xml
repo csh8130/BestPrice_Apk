@@ -12,6 +12,33 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+    <string-array name="board_entries">
+        <item>쿨엔조이 특가 게시판</item>
+        <item>루리웹 특가 게시판</item>
+        <item>뽐뿌 특가 게시판</item>
+        <item>뽐뿌 해외 특가 게시판</item>
+        <item>SLR 특가 게시판</item>
+        <item>SLR 해외 특가 게시판</item>
+    </string-array>
+    <string-array name="board_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- 특가게시판 보이기 설정 디폴트값-->
+    <string-array name="default_board_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
     <string-array name="coolN_entries">
         <item>뉴스/신제품</item>
         <item>팁/강좌</item>
@@ -67,6 +94,7 @@
         <item>24</item>
     </string-array>
 
+    <!-- 첫 설치시 어떤 쿨엔조이 게시판만 보여줄 것인가 -->
     <string-array name="default_array">
         <item>0</item>
         <item>1</item>
