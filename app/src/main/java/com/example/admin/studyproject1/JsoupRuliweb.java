@@ -37,8 +37,8 @@ public class JsoupRuliweb extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        array = new ArrayList<BoardElement>(30);
-        for(int i=0;i<30;i++)
+        array = new ArrayList<BoardElement>(28);
+        for(int i=0;i<28;i++)
         {
             array.add(new BoardElement());
         }
