@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="0sp"
         android:layout_marginBottom="10dp"/>
+
     <ImageView
         android:id="@+id/delimeter"
         android:layout_width="match_parent"

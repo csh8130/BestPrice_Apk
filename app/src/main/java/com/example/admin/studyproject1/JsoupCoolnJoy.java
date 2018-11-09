@@ -110,7 +110,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             final BoardElement element = array.get(i);
 
             final View singleFrame = mainActivity.getLayoutInflater().inflate(R.layout.frame_element, null);
-            singleFrame.setId(i);
+            //singleFrame.setId(i);
 
             //테마관련 코드
             SharedPreferences setRefer = PreferenceManager.getDefaultSharedPreferences(mainActivity);
