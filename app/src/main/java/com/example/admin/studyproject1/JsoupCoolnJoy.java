@@ -46,11 +46,8 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        array = new ArrayList<BoardElement>(24);
-        for(int i=0;i<24;i++)
-        {
-            array.add(new BoardElement());
-        }
+        array = new ArrayList<BoardElement>(1);
+
 
         String selector = "tr:not(.bo_notice) td.td_subject";
 
@@ -59,11 +56,16 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             Document doc = Jsoup.connect(url).get();
             Elements titles = doc.select(selector);
 
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
+
             int x = 0;
             for (Element e : titles) {
                 array.get(x).title = e.text();
                 x++;
-                if(x==24)
+                if(x==titles.size())
                     break;
             }
 
@@ -72,14 +74,14 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             Elements links = doc.select(selector);
 
             //if(links.size() ==0)
-                //Toast.makeText(mainActivity.getApplicationContext(),""+links.size(),Toast.LENGTH_LONG).show();
+            //Toast.makeText(mainActivity.getApplicationContext(),""+links.size(),Toast.LENGTH_LONG).show();
 
             x = 0;
 
             for (Element e : links) {
                 array.get(x).link = e.attributes().get("href");
                 x++;
-                if(x==24)
+                if(x==titles.size())
                     break;
             }
 
@@ -91,7 +93,7 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : dates) {
                 array.get(x).date = e.text();
                 x++;
-                if(x==24)
+                if(x==titles.size())
                     break;
             }
         }
@@ -99,6 +101,64 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
         {
             Log.e("error:",e.getMessage());
         }
+
+        int cnt = array.size();
+        //두번째 페이지
+        url = "http://www.coolenjoy.net/bbs/board.php?bo_table=jirum/p2"; //특가게시판
+
+        selector = "tr:not(.bo_notice) td.td_subject";
+
+        //출처: http://cooljy.tistory.com/349 [CoolJY 네 다락방]
+        try{
+            Document doc = Jsoup.connect(url).get();
+            Elements titles = doc.select(selector);
+
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
+
+            int x = cnt;
+            for (Element e : titles) {
+                array.get(x).title = e.text();
+                x++;
+                if(x==titles.size()+cnt)
+                    break;
+            }
+
+            selector = "tr:not(.bo_notice) td.td_subject a:nth-child(1)";
+
+            Elements links = doc.select(selector);
+
+            //if(links.size() ==0)
+            //Toast.makeText(mainActivity.getApplicationContext(),""+links.size(),Toast.LENGTH_LONG).show();
+
+            x = cnt;
+
+            for (Element e : links) {
+                array.get(x).link = e.attributes().get("href");
+                x++;
+                if(x==titles.size()+cnt)
+                    break;
+            }
+
+            selector = "tr:not(.bo_notice) td.td_date";
+
+            Elements dates = doc.select(selector);
+
+            x = cnt;
+            for (Element e : dates) {
+                array.get(x).date = e.text();
+                x++;
+                if(x==titles.size()+cnt)
+                    break;
+            }
+        }
+        catch ( Exception e)
+        {
+            Log.e("error:",e.getMessage());
+        }
+
         return null;
     }
 
