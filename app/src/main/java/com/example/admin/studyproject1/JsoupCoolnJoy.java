@@ -65,8 +65,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : titles) {
                 array.get(x).title = e.text();
                 x++;
-                if(x==titles.size())
-                    break;
             }
 
             selector = "tr:not(.bo_notice) td.td_subject a:nth-child(1)";
@@ -81,8 +79,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : links) {
                 array.get(x).link = e.attributes().get("href");
                 x++;
-                if(x==titles.size())
-                    break;
             }
 
             selector = "tr:not(.bo_notice) td.td_date";
@@ -93,8 +89,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : dates) {
                 array.get(x).date = e.text();
                 x++;
-                if(x==titles.size())
-                    break;
             }
         }
         catch ( Exception e)
@@ -122,8 +116,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : titles) {
                 array.get(x).title = e.text();
                 x++;
-                if(x==titles.size()+cnt)
-                    break;
             }
 
             selector = "tr:not(.bo_notice) td.td_subject a:nth-child(1)";
@@ -138,8 +130,6 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : links) {
                 array.get(x).link = e.attributes().get("href");
                 x++;
-                if(x==titles.size()+cnt)
-                    break;
             }
 
             selector = "tr:not(.bo_notice) td.td_date";
@@ -150,13 +140,12 @@ public class JsoupCoolnJoy extends AsyncTask<Void, Void, Void> {
             for (Element e : dates) {
                 array.get(x).date = e.text();
                 x++;
-                if(x==titles.size()+cnt)
-                    break;
             }
         }
         catch ( Exception e)
         {
-            Log.e("error:",e.getMessage());
+            array.add(new BoardElement());
+            array.get(array.size()-1).title = "인터넷 연결을 확인해 주십시오";
         }
 
         return null;

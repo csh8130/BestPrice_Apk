@@ -35,11 +35,8 @@ public class JsoupPpomppu1 extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        array = new ArrayList<BoardElement>(15);
-        for(int i=0;i<15;i++)
-        {
-            array.add(new BoardElement());
-        }
+        array = new ArrayList<BoardElement>(1);
+
         String url = "http://m.ppomppu.co.kr/new/bbs_list.php?id=ppomppu";
 
         String selector;
@@ -52,6 +49,11 @@ public class JsoupPpomppu1 extends AsyncTask<Void, Void, Void> {
             selector = "li.none-border";
             titles = doc.select(selector);
             titles = titles.select("span.title");
+
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
 
             x = 0;
             for (Element e : titles) {
@@ -82,7 +84,57 @@ public class JsoupPpomppu1 extends AsyncTask<Void, Void, Void> {
         }
         catch ( Exception e)
         {
-            Log.e("error:",e.getMessage());
+            array.add(new BoardElement());
+            array.get(array.size()-1).title = "인터넷 연결을 확인해 주십시오";
+        }
+
+        url = "http://m.ppomppu.co.kr/new/bbs_list.php?id=ppomppu&page=2";
+        int cnt = array.size();
+
+        try{
+            Document doc = Jsoup.connect(url).get();
+            int x;
+            Elements titles;
+            selector = "li.none-border";
+            titles = doc.select(selector);
+            titles = titles.select("span.title");
+
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
+
+            x = cnt;
+            for (Element e : titles) {
+                array.get(x).title = e.text();
+                x++;
+            }
+
+            selector = "li.none-border";
+            titles = doc.select(selector);
+            titles = titles.select("a.list_b_01");
+
+            x = cnt;
+            for (Element e : titles) {
+                String link = e.attributes().get("href");
+                array.get(x).link = "http://m.ppomppu.co.kr/new/"+link;
+                x++;
+            }
+
+            selector = "li.none-border";
+            titles = doc.select(selector);
+            titles = titles.select("span.info");
+            x = cnt;
+            for (Element e : titles) {
+                array.get(x).date = e.text();
+                x++;
+            }
+
+        }
+        catch ( Exception e)
+        {
+            array.add(new BoardElement());
+            array.get(array.size()-1).title = "인터넷 연결을 확인해 주십시오";
         }
 
         return null;

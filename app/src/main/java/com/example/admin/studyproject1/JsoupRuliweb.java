@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -37,11 +38,8 @@ public class JsoupRuliweb extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        array = new ArrayList<BoardElement>(28);
-        for(int i=0;i<28;i++)
-        {
-            array.add(new BoardElement());
-        }
+        array = new ArrayList<BoardElement>(1);
+
         String url = "http://bbs.ruliweb.com/market/board/1020";
 
         String selector;
@@ -55,6 +53,11 @@ public class JsoupRuliweb extends AsyncTask<Void, Void, Void> {
             titles = doc.select(selector);
             titles = titles.select("tr:not(.table_body.notice)");
             titles = titles.select("td.time");
+
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
 
             x = 0;
             for (Element e : titles) {
@@ -86,7 +89,60 @@ public class JsoupRuliweb extends AsyncTask<Void, Void, Void> {
         }
         catch ( Exception e)
         {
-            Log.e("error:",e.getMessage());
+            array.add(new BoardElement());
+            array.get(array.size()-1).title = "인터넷 연결을 확인해 주십시오";
+        }
+
+        url = "http://bbs.ruliweb.com/market/board/1020/list?page=2";
+
+        int cnt = array.size();
+
+        try{
+            Document doc = Jsoup.connect(url).get();
+            int x;
+            Elements titles;
+            selector = "tr.table_body";
+            titles = doc.select(selector);
+            titles = titles.select("tr:not(.table_body.notice)");
+            titles = titles.select("td.time");
+
+            for(int i=0;i<titles.size();i++)
+            {
+                array.add(new BoardElement());
+            }
+
+            x = cnt;
+            for (Element e : titles) {
+                array.get(x).date = e.text();
+                x++;
+            }
+
+            selector = "tr.table_body";
+            titles = doc.select(selector);
+            titles = titles.select("tr:not(.table_body.notice)");
+            titles = titles.select("a.deco");
+
+            x = cnt;
+            for (Element e : titles) {
+                array.get(x).title = e.text();
+                x++;
+            }
+
+            x = cnt;
+
+            for (Element e : titles) {
+                String link = e.attributes().get("href");
+                int index = link.indexOf(".");
+                link = link.substring(index);
+                link = "http://m" + link;
+                array.get(x).link = link;
+                x++;
+            }
+        }
+        catch ( Exception e)
+        {
+            array.add(new BoardElement());
+            array.get(array.size()-1).title = "인터넷 연결을 확인해 주십시오";
         }
 
         return null;
