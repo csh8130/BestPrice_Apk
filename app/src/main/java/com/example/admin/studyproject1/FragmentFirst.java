@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.victor.loading.rotate.RotateLoading;
+
 /**
  * Created by admin on 2017-05-09.
  */
@@ -26,6 +28,10 @@ public class FragmentFirst extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_first,container,false);
+
+        //로딩
+        RotateLoading loading = (RotateLoading)v.findViewById(R.id.rotateloading);
+        loading.start();
 
         //테마관련 코드
         SharedPreferences setRefer = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -56,7 +62,9 @@ public class FragmentFirst extends Fragment {
         {
             coolnJoy = new JsoupCoolnJoy(v,getActivity(),url);
         }
+
         coolnJoy.execute();
+
 
         return v;
     }

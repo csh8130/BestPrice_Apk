@@ -91,7 +91,7 @@ public class JsoupSlr2 extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         LinearLayout scrollViewgroup = (LinearLayout)v.findViewById(R.id.viewgroup);
-
+        scrollViewgroup.removeAllViews();
         for (int i = 0; i < array.size(); i++) {
             final BoardElement element = array.get(i);
 

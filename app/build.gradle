@@ -7,8 +7,8 @@ android {
         applicationId 'com.csh8130.admin.studyproject1'
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 11
-        versionName '1.53'
+        versionCode 12
+        versionName '1.6'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,4 +32,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/jsoup-1.10.2.jar')
     compile 'com.google.android.gms:play-services-ads:10.2.0'
+    compile 'com.romainpiel.shimmer:library:1.4.0'
+    compile 'com.victor:lib:1.0.4'
 }

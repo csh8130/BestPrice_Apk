@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#000000</color>
 
+    <color name="action_tv_color">#cccccc</color>
 
     <color name="textBack">#000000</color>
     <color name="textCaption">#ffffff</color>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <ScrollView
         android:layout_width="match_parent"
@@ -12,6 +13,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:dividerHeight="3dp">
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/rotateloading"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:loading_width="5dp"
+                app:loading_color="#ffffff"
+                android:layout_centerInParent="true"/>
         </LinearLayout>
 
     </ScrollView>

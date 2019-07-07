@@ -3,6 +3,9 @@ package com.example.admin.studyproject1;
 import com.google.android.gms.ads.AdRequest;
 
 import com.google.android.gms.ads.AdView;
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
+import com.victor.loading.rotate.RotateLoading;
 
 
 import android.app.Fragment;
@@ -12,10 +15,12 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.util.ArraySet;
+import android.support.v7.app.ActionBar;
 import android.view.SubMenu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +61,6 @@ public class MainActivity extends AppCompatActivity
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
-
-
 
         toggle.syncState();
 
@@ -110,6 +112,13 @@ public class MainActivity extends AppCompatActivity
         {
             s.getItem(Integer.parseInt((String)array[j])).setVisible(true);
         }
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_bar);
+
+        ShimmerTextView mytitle = (ShimmerTextView)findViewById(R.id.mytitle);
+        mytitle.setReflectionColor(R.color.action_tv_color);
+        new Shimmer().setRepeatCount(0).setDuration(2000).setDirection(Shimmer.ANIMATION_DIRECTION_LTR).start(mytitle);
     }
 
 
