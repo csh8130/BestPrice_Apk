@@ -48,7 +48,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
             Elements titles;
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("span.title");
+            titles = titles.select("li.title");
 
             for(int i=0;i<titles.size();i++)
             {
@@ -63,7 +63,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
 
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("a.list_b_01");
+            titles = titles.select("a");
 
             x = 0;
             for (Element e : titles) {
@@ -74,7 +74,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
 
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("span.info");
+            titles = titles.select("time");
             x = 0;
             for (Element e : titles) {
                 array.get(x).date = e.text();
@@ -95,7 +95,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
             Elements titles;
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("span.title");
+            titles = titles.select("li.title");
 
             for(int i=0;i<titles.size();i++)
             {
@@ -110,7 +110,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
 
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("a.list_b_01");
+            titles = titles.select("a");
 
             x = cnt;
             for (Element e : titles) {
@@ -121,7 +121,7 @@ public class JsoupPpomppu2 extends AsyncTask<Void, Void, Void> {
 
             selector = "li.none-border";
             titles = doc.select(selector);
-            titles = titles.select("span.info");
+            titles = titles.select("time");
             x = cnt;
             for (Element e : titles) {
                 array.get(x).date = e.text();
