@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId 'com.csh8130.admin.studyproject1'
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 28
         versionCode 13
         versionName '1.61'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
